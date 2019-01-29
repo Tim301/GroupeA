@@ -49,17 +49,63 @@ public class QuadExample {
   
         while (!Display.isCloseRequested()) {
             // Clear the screen and depth buffer
+            
+            //Instructions permettant de tracer le quadrilatere
             GL11.glClear(GL11.GL_COLOR_BUFFER_BIT | GL11.GL_DEPTH_BUFFER_BIT);  
          
+            //carre 1
             // set the color of the quad (R,G,B,A)
-            GL11.glColor3f(0.5f,0.5f,1.0f);
+            GL11.glColor3f(0.2f,0.2f,1.0f);
              
             // draw quad
-            GL11.glBegin(GL11.GL_QUADS);
-            GL11.glVertex2f(100,100);
-            GL11.glVertex2f(100+200,100);
-            GL11.glVertex2f(100+200,100+200);
-            GL11.glVertex2f(100,100+200);
+            //glBegin permet de faire une selection
+            GL11.glBegin(GL11.GL_TRIANGLE_FAN);
+                //Coordonnees des points
+                GL11.glVertex2f(100,100);
+                GL11.glVertex2f(100+200,100);
+                GL11.glVertex2f(100+200,100+200);
+                GL11.glVertex2f(100,100+200);
+            //On termine glBegin par un end
+          
+            
+            //carre 2
+            // set the color of the quad (R,G,B,A)
+            GL11.glColor3f(1.0f,0.2f,0.2f);
+             
+            // draw quad
+            
+                //Coordonnees des points
+                GL11.glVertex2f(100,300);
+                GL11.glVertex2f(100+200,300);
+                GL11.glVertex2f(100+200,300+200);
+                GL11.glVertex2f(100,300+200);
+            
+            
+           
+            //carre 3
+            // set the color of the quad (R,G,B,A)
+            GL11.glColor3f(0.2f,1.0f,0.2f);
+             
+            // draw quad
+            
+                //Coordonnees des points
+                GL11.glVertex2f(300,300);
+                GL11.glVertex2f(300+200,300);
+                GL11.glVertex2f(300+200,300+200);
+                GL11.glVertex2f(300,300+200);
+            
+            
+            //carre 4
+            // set the color of the quad (R,G,B,A)
+            GL11.glColor3f(1.0f,1.0f,0.2f);
+             
+            // draw quad
+            
+                //Coordonnees des points
+                GL11.glVertex2f(300,100);
+                GL11.glVertex2f(300+200,100);
+                GL11.glVertex2f(300+200,100+200);
+                GL11.glVertex2f(300,100+200);
             GL11.glEnd();
   
             Display.update();
@@ -111,6 +157,8 @@ public class QuadExample {
         }        
         
         QuadExample quadExample = new QuadExample();
+        
+       
         quadExample.start();
     }
 }
