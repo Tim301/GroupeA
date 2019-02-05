@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=TextureLoader
+comment1.params=image
+comment1.target=int\ loadTexture(java.awt.image.BufferedImage)
+comment2.params=loc
+comment2.target=java.awt.image.BufferedImage\ loadImage(java.lang.String)
+numComments=3
