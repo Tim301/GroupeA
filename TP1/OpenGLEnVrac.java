@@ -47,10 +47,14 @@ public class OpenGLEnVrac {
 
     private boolean light;         // Lighting ON/OFF    
     
+    //Parametres d'eclairement
     private float[] lightAmbient = {1.0f,1.0f,1.0f,1.0f};
-    private float[] lightDiffuse = {1.0f,1.0f,1.0f,1.0f};
-
-    private float[] lightPosition = {0.0f,0.0f,5.0f,1.0f};
+    //Ajout de couleurs
+    private float[] lightDiffuse = {0.8f,0.0f,0.7f,0.0f}; // {R, G, B, toujours_0}
+    //Declaration de la composante speculaire
+    private float[] lightSpecularComponent = {1.0f, 1.0f, 1.0f, 0.0f}; // {R,G,B, toujours_0}. Ici, la composante speculaire est blanche
+    //Position de a lumière
+    private float[] lightPosition = {0.0f,1000.0f,0.0f,1.0f}; //Lors que le dernier composant est a 1, la lumière est ponctuelle. Si il est a 0, la lumiere est directionnelle
 
     private boolean filter = false;
     
@@ -239,7 +243,7 @@ public class OpenGLEnVrac {
         //Lorsqu'on quand un état, tout ce qui suit est change. (Se rappeler du systeme de leviers)
         GL11.glTranslatef(-3.0f, 0.0f,0.0f);
         
-        //Desactivation de l'eclairage
+        //Desactivation de l'eclairage car il faut desactiver l'eclairage pour voir les fils de fer
         GL11.glDisable(GL11.GL_LIGHTING);
         
         //On decide des rotations avant l'animation
@@ -296,6 +300,9 @@ public class OpenGLEnVrac {
         GL11.glVertex3f(-1.0f, 1.0f, -1.0f); // Top Left Of The Texture and Quad
         GL11.glEnd();
         
+        
+        //On a desactive l'eclairage pour voir les fils. On peut maintenant le remettre
+        GL11.glEnable(GL11.GL_LIGHTING);
         
         return true;
     }
@@ -355,10 +362,17 @@ public class OpenGLEnVrac {
 
         FloatBuffer buffPosition = BufferUtils.createFloatBuffer(4).put(lightPosition);
         buffPosition.position(0);
+        
+        //Creation d'un buffer. C'est uns structure de donnee qui reagit comme un tableau dynamique
+        FloatBuffer buffSpecular = BufferUtils.createFloatBuffer(4).put(lightSpecularComponent);
+        buffSpecular.position(0);
                 
         GL11.glLight(GL11.GL_LIGHT1, GL11.GL_AMBIENT, buffAmbient);
         GL11.glLight(GL11.GL_LIGHT1, GL11.GL_DIFFUSE, buffDiffuse);
         GL11.glLight(GL11.GL_LIGHT1, GL11.GL_POSITION, buffPosition);
+        //Declaration de la composante speculaire
+        GL11.glLight(GL11.GL_LIGHT1, GL11.GL_SPECULAR, buffSpecular);
+        
         
         GL11.glEnable(GL11.GL_LIGHT1);
         
