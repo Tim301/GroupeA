@@ -50,18 +50,37 @@ public class OpenGLEnVrac {
     private float[] lightDiffuse = {0.5f,0.5f,0.5f,0.0f};
     private float[] lightSpecularComponent = {1.0f,1.0f,1.0f,0.0f};
     
+    //Attenuation
     private float quadratic_attenuation = 0.01f;
     private float linear_attenuation = 0.0f;
     private float constant_attenuation = 1.0f;
 
+    //Position de la lumiere
+    /*Le dernier coefficient indique
+     * le tyê de lumiere. Si la valeur est 1.0f, la lumiere est
+     * ponctuelles. Si la valeur est de 0.0f, la lumière est directionnelle.
+     * La direction de la lumiere est donnee pas les trois premieres composantes du vecteur
+     * ATTENTION : la lumière directionelle n'est pas soumise a l'attenuation
+     */
+    private float[] lightPosition = {0.0f,0.0f,1.0f,1.0f};
     
-    private float[] lightPosition = {0.0f,0.0f,-7.0f,1.0f};
+    // DECLARATION DES VARIABLES D'ECLAIREMENT DU SPOT
+    
+    //Direction de la lumiere spot : vecteur de direction
+    //La 4eme composante n'a pas d'importance. On la met par defaut a 1
+    private float[] SpotDirection = {1.5f, 0.0f, -5.0f, 1.0f};
+    //Angl d'ouverture de la lumiere, en degres
+    private float SpotCutoff = 19.0f;
+    //Falloff, 0 etant la concentration maximale
+    private float SpotExponent = 5.0f;
     
     
+    //Parametres d'eclairament
     private float[] no_mat = {0.0f, 0.0f, 0.0f, 1.0f};
     private float[] mat_ambient = {0.3f, 0.3f, 0.3f, 1.0f};
     private float[] mat_diffuse = {1.0f, 1.0f, 1.0f, 1.0f};
-    private float[] mat_specular = {1.0f, 0.0f, 0.0f, 1.0f};
+    //Reglage de la couleur de la lumière speculaire
+    private float[] mat_specular = {0.0f, 1.0f, 0.0f, 1.0f};
     private float no_shininess = 0.0f;
     private float low_shininess = 5.0f;
     private float high_shininess = 100.0f;
@@ -378,7 +397,11 @@ public class OpenGLEnVrac {
         FloatBuffer buffSpecular = BufferUtils.createFloatBuffer(4).put(lightSpecularComponent);
         buffSpecular.position(0);
         
+        //On fait un buffer par tableau. Le buffer sert a transmettre le buffer
+        FloatBuffer buffSpotDirection = BufferUtils.createFloatBuffer(4).put(SpotDirection);
+        buffSpotDirection.position(0);
                 
+        //On s'adresse a la premiere lumiere. Le premier parametre est donc GL11.GL_LIGHT1
         GL11.glLight(GL11.GL_LIGHT1, GL11.GL_AMBIENT, buffAmbient);
         GL11.glLight(GL11.GL_LIGHT1, GL11.GL_DIFFUSE, buffDiffuse);
         GL11.glLight(GL11.GL_LIGHT1, GL11.GL_SPECULAR, buffSpecular);
@@ -386,6 +409,12 @@ public class OpenGLEnVrac {
         GL11.glLightf(GL11.GL_LIGHT1, GL11.GL_CONSTANT_ATTENUATION, constant_attenuation);
         GL11.glLightf(GL11.GL_LIGHT1, GL11.GL_LINEAR_ATTENUATION, linear_attenuation);
         GL11.glLightf(GL11.GL_LIGHT1, GL11.GL_QUADRATIC_ATTENUATION, quadratic_attenuation);
+        
+        //Lorsqu'on a a faire a un tableau, on agit sur GL11.glLight
+        //Si on a un float, on utilise Gl11.glLightf
+        GL11.glLight(GL11.GL_LIGHT1, GL11.GL_SPOT_DIRECTION, buffSpotDirection);
+        GL11.glLightf(GL11.GL_LIGHT1, GL11.GL_SPOT_CUTOFF, SpotCutoff);
+        GL11.glLightf(GL11.GL_LIGHT1, GL11.GL_SPOT_EXPONENT, SpotExponent);
 
         
         
