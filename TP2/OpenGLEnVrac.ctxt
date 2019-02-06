@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=OpenGLEnVrac
+comment0.text=\r\n\ Cette\ classe\ rassemble\ la\ plupart\ des\ instructions\ de\ base\r\n\ couramment\ utilis\u00E9es\ avec\ la\ version\ 1.1\ d'OpenGL.\ \u00E0\ savoir\ \:\r\n\ <ul>\r\n\ \ \ <li>\ la\ cr\u00E9ation\ de\ polygones,\r\n\ \ \ <li>\ l'application\ de\ texture,\r\n\ \ \ <li>\ les\ transformations\ affines\ dans\ le\ mode\ <b>MODELVIEW</b>,\r\n\ \ \ <li>\ la\ d\u00E9finition\ des\ param\u00E8tres\ de\ cam\u00E9ra\ dans\ le\ mode\ <b>PROJECTION</b>,\r\n\ \ \ <li>\ les\ transformations\ affines\ dans\ le\ <b>MODELVIEW</b>,\r\n\ \ \ <li>\ l'empilement\ et\ le\ d\u00E9pilement\ de\ matrices.\r\n\ </ul>\r\n
+comment1.params=argv
+comment1.target=void\ main(java.lang.String[])
+comment2.params=fullscreen
+comment2.target=void\ start(boolean)
+comment3.params=
+comment3.target=void\ mainloop()
+comment4.params=
+comment4.target=void\ switchMode()
+comment5.params=
+comment5.target=boolean\ render()
+comment6.params=
+comment6.target=void\ createWindow()
+comment7.params=
+comment7.target=void\ init()
+comment8.params=
+comment8.target=void\ initGL()
+comment9.params=
+comment9.target=void\ cleanup()
+numComments=10
