@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Vecteur3D
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Vecteur3D\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Vecteur3D()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Vecteur3D\r\n
+comment2.params=_x\ _y\ _z
+comment2.target=Vecteur3D(float,\ float,\ float)
+comment2.text=\r\n\ Constructor\ for\ objects\ of\ class\ Vecteur3D\r\n
+comment3.params=
+comment3.target=float\ getX()
+comment4.params=
+comment4.target=float\ getY()
+comment5.params=
+comment5.target=float\ getZ()
+numComments=6
