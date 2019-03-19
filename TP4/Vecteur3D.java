@@ -1,18 +1,18 @@
-package TP3;
+package TP4;
 
 /**
- * Write a description of class Vecteur3D here.
+ * Vecteur de dimension 3
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @Alexis Heloir
+ * @2019/03/19
  */
 public class Vecteur3D
 {
-    // instance variables - replace the example below with your own
+    // les trois dimensions du vecteur
     float m_x,m_y,m_z;
 
     /**
-     * Constructor for objects of class Vecteur3D
+     * Constructor sans paramètre pour le vecteur
      */
     public Vecteur3D()
     {
@@ -22,7 +22,10 @@ public class Vecteur3D
     }
 
     /**
-     * Constructor for objects of class Vecteur3D
+     * Constructur qvec trois paramètres
+     * @param _x la composante X
+     * @param _y la composante Y
+     * @param _z la composante Z
      */
     public Vecteur3D(float _x, float _y, float _z)
     {
@@ -31,14 +34,26 @@ public class Vecteur3D
         m_z = _z; 
     }
 
+    /**
+     * Accesseur pour la composante X
+     * @return la composante X
+     */
     public float getX(){
         return m_x;
     }
 
+    /**
+     * Accesseur pour la composante X
+     * @return la composante X
+     */
     public float getY(){
         return m_y;
     }
 
+    /**
+     * Accesseur pour la composante X
+     * @return la composante X
+     */
     public float getZ(){
         return m_z;
     }

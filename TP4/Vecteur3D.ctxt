@@ -1,16 +1,19 @@
 #BlueJ class context
 comment0.target=Vecteur3D
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Vecteur3D\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Vecteur\ de\ dimension\ 3\r\n\r\n\ @Alexis\ Heloir\r\n\ @2019/03/19\r\n
 comment1.params=
 comment1.target=Vecteur3D()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Vecteur3D\r\n
+comment1.text=\r\n\ Constructor\ sans\ param\u00E8tre\ pour\ le\ vecteur\r\n
 comment2.params=_x\ _y\ _z
 comment2.target=Vecteur3D(float,\ float,\ float)
-comment2.text=\r\n\ Constructor\ for\ objects\ of\ class\ Vecteur3D\r\n
+comment2.text=\r\n\ Constructur\ qvec\ trois\ param\u00E8tres\r\n\ @param\ _x\ la\ composante\ X\r\n\ @param\ _y\ la\ composante\ Y\r\n\ @param\ _z\ la\ composante\ Z\r\n
 comment3.params=
 comment3.target=float\ getX()
+comment3.text=\r\n\ Accesseur\ pour\ la\ composante\ X\r\n\ @return\ la\ composante\ X\r\n
 comment4.params=
 comment4.target=float\ getY()
+comment4.text=\r\n\ Accesseur\ pour\ la\ composante\ X\r\n\ @return\ la\ composante\ X\r\n
 comment5.params=
 comment5.target=float\ getZ()
+comment5.text=\r\n\ Accesseur\ pour\ la\ composante\ X\r\n\ @return\ la\ composante\ X\r\n
 numComments=6
