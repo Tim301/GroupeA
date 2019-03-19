@@ -44,6 +44,8 @@ public abstract class Lumiere
      */
     public Lumiere(Vecteur3D _vecteurAmbiant, Vecteur3D _vecteurDiffus, Vecteur3D _vecteurSpeculaire)
     {
+        this();
+        
         m_ambientComponent[0] = _vecteurAmbiant.getX();   
         m_ambientComponent[1] = _vecteurAmbiant.getY();
         m_ambientComponent[2] = _vecteurAmbiant.getZ();
