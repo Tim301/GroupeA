@@ -1,4 +1,5 @@
-package TP4;
+
+package TP4
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.BufferUtils;
@@ -83,10 +84,9 @@ public class LumiereSpot extends LumiereDirectionnelle
         super.initialise();
         
         FloatBuffer buffDirection = BufferUtils.createFloatBuffer(4).put(m_spotDirection);
-        buffDirection.position(0);
+        buffPosition.position(0);
 
         GL11.glLight(m_currentLight, GL11.GL_AMBIENT, buffPosition);
-        GL11.glLightf(m_currentLight, GL11.GL_SPOT_CUTOFF, m_spotCutoff);
-        GL11.glLightf(m_currentLight, GL11.GL_SPOT_EXPONENT, m_spotExponent);
+        
     }
 }

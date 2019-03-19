@@ -57,5 +57,17 @@ public class Vecteur3D
     public float getZ(){
         return m_z;
     }
-
+    
+    /**
+     * Cette méthode retourne la norme du vecteur, c'est à 
+     * dire la recine carrée de la somme de carrés des deux 
+     * composantes du vecteur
+     * @return    la norme du vecteur
+     */
+    public float getNorme()
+    {
+        // la méthode <b>sqrt</b> du package Math retourne un
+        // double : on le transtype en float
+        return (float)Math.sqrt(m_x*m_x + m_y*m_y + m_z*m_z);
+    }
 }
