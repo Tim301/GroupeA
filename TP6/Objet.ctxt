@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Objet
+comment0.text=\r\n\ Cette\ classe\ abstraite\ factorise\ le\ code\ commun\ \u00E0\ tous\ les\r\n\ \u00E9l\u00E9ments\ "dessinables"\ du\ projet\ \:\ il\ s'agit\ de\ l'ensemble\ \r\n\ des\ variations\ des\ cubes\r\n\r\n\ @author\ Alexis\ Heloir\r\n\ @version\ 2019/21/03\r\n
+comment1.params=_parent
+comment1.target=Objet(Noeud)
+comment1.text=\r\n\ Le\ constucteur\ de\ la\ classe\ Objet\ prend\ un\ noeud\ en\ param\u00E8tre.\r\n\ se\ r\u00E9f\u00E9rer\ \u00E0\ la\ classe\ parente\ (Noeud)\ pour\ plus\ de\ d\u00E9tails.\r\n\ @param\ _parent\ le\ noud\ parent\ au\ noeud\ courant\ pour\ la\ construction\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ du\ graphe\ de\ sc\u00E8ne.\r\n
+comment2.params=
+comment2.target=void\ dessine()
+comment2.text=\r\n\ La\ m\u00E9thode\ dessine\ prend\ en\ charge\ les\ appels\ OpenGL\ participant\ \u00E0\ \r\n\ l'affichage\ de\ l'objet\r\n
+comment3.params=
+comment3.target=void\ affiche()
+comment3.text=\r\n\ La\ m\u00E9thode\ affiche\ appelle\ successivement\ la\ m\u00E9thode\ de\ repr\u00E9sentation\ de\r\n\ l'objet\ puis\ appelle\ de\ mani\u00E8re\ r\u00E9cursive\ la\ m\u00E9thode\ affiche\ pour\ l'ensemble\ \r\n\ des\ noeuds\ enfants.\ Le\ graphe\ de\ scene\ est\ ainsi\ parcouru.\r\n
+numComments=4

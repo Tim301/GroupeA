@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Echelle
+comment0.text=\r\n\ La\ classe\ Echelle\ applique\ une\ translation\ d\u00EF\u00BF\u00BDfinie\ par\r\n\ l'attribut\ m_vecteurEchelle\r\n\r\n\ @author\ Alexis\ Heloir\r\n\ @version\ 2019/03/20\r\n
+comment1.params=_parent\ _vecteurEchelle
+comment1.target=Echelle(Noeud,\ TP4.Vecteur3D)
+comment1.text=\r\n\ Ce\ constructeur\ fixe\ les\ coordonn\u00EF\u00BF\u00BDes\ de\ mise\ \u00EF\u00BF\u00BD\ l'\u00EF\u00BF\u00BDchelle\ en\ m\u00EF\u00BF\u00BDme\ temps\ qu'une\ r\u00EF\u00BF\u00BDfe?ence\r\n\ vers\ l'instance\ de\ noeud\ parent\r\n\ @param\ _parent\ le\ noeud\ d\u00EF\u00BF\u00BDclar\u00EF\u00BF\u00BD\ comme\ parent\ de\ l'instance\ courante\ (this)\r\n\ @param\ _vecteurEchelle\ les\ coordonn\u00EF\u00BF\u00BDes\ de\ mise\ \u00EF\u00BF\u00BD\ l'echelle\ \u00EF\u00BF\u00BD\ appliquer\r\n
+comment2.params=
+comment2.target=void\ transforme()
+comment2.text=\r\n\ impl\u00EF\u00BF\u00BDmentation\ de\ la\ m\u00EF\u00BF\u00BDthode\ abstraite\ transfome()\ d\u00EF\u00BF\u00BDclar\u00EF\u00BF\u00BDe\ initialement\ dans\ la\r\n\ classe\ abstraire\ Transformation.\ Elle\ consiste\ \u00EF\u00BF\u00BD\ appeler\ l'instruction\ OpenGL\ \r\n\ glScalef\ avec\ trois\ coordonn\u00EF\u00BF\u00BDes\ (float)\r\n
+numComments=3

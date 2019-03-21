@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Translation
+comment0.text=\r\n\ La\ classe\ translation\ applique\ une\ translation\ d\u00EF\u00BF\u00BDfinie\ par\r\n\ l'attribut\ m_coordonnees\r\n\r\n\ @author\ Alexis\ Heloir\r\n\ @version\ 2019/03/20\r\n
+comment1.params=_parent\ _coordonnees
+comment1.target=Translation(Noeud,\ TP4.Vecteur3D)
+comment1.text=\r\n\ Ce\ constructeur\ fixe\ les\ coordonn\u00EF\u00BF\u00BDes\ de\ transaltion\ en\ m\u00EF\u00BF\u00BDme\ temps\ qu'une\ r\u00EF\u00BF\u00BDfe?ence\r\n\ vers\ l'instance\ de\ noeud\ parent\r\n\ @param\ _parent\ le\ noeud\ d\u00EF\u00BF\u00BDclar\u00EF\u00BF\u00BD\ comme\ parent\ de\ l'instance\ courante\ (this)\r\n\ @param\ _coordonneees\ les\ coordonn\u00EF\u00BF\u00BDes\ de\ translation\ \u00EF\u00BF\u00BD\ appliquer\r\n
+comment2.params=_parent
+comment2.target=Translation(Noeud)
+comment2.text=\r\n\ Ce\ constructeur\ fixe\ les\ coordonn\u00EF\u00BF\u00BDes\ de\ transaltion\ en\ m\u00EF\u00BF\u00BDme\ temps\ qu'une\ r\u00EF\u00BF\u00BDfe?ence\r\n\ vers\ l'instance\ de\ noeud\ parent\r\n\ @param\ _parent\ le\ noeud\ d\u00EF\u00BF\u00BDclar\u00EF\u00BF\u00BD\ comme\ parent\ de\ l'instance\ courante\ (this)\r\n\ @param\ _coordonneees\ les\ coordonn\u00EF\u00BF\u00BDes\ de\ translation\ \u00EF\u00BF\u00BD\ appliquer\r\n
+comment3.params=
+comment3.target=void\ transforme()
+comment3.text=\r\n\ impl\u00EF\u00BF\u00BDmentation\ de\ la\ m\u00EF\u00BF\u00BDthode\ abstraite\ transfome()\ d\u00EF\u00BF\u00BDclar\u00EF\u00BF\u00BDe\ initialement\ dans\ la\r\n\ classe\ abstraire\ Transformation.\ Elle\ consiste\ \u00EF\u00BF\u00BD\ appeler\ l'instruction\ OpenGL\ \r\n\ glTranslatef\ avec\ trois\ coordonn\u00EF\u00BF\u00BDes\ (float)\r\n
+numComments=4

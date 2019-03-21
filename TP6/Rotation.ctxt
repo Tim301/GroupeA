@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Rotation
+comment0.text=\r\n\ La\ classe\ Rotation\ applique\ une\ translation\ d\u00EF\u00BF\u00BDfinie\ par\r\n\ le\ attributs\ m_angle\ et\ m_axe\r\n\r\n\ @author\ Alexis\ Heloir\r\n\ @version\ 2019/03/20\r\n
+comment1.params=_parent\ _axe\ _angle
+comment1.target=Rotation(Noeud,\ TP4.Vecteur3D,\ float)
+comment1.text=\r\n\ Ce\ constructeur\ fixe\ les\ coordonn\u00EF\u00BF\u00BDes\ de\ transaltion\ en\ m\u00EF\u00BF\u00BDme\ temps\ qu'une\ r\u00EF\u00BF\u00BDfe?ence\r\n\ vers\ l'instance\ de\ noeud\ parent\r\n\ @param\ _parent\ le\ noeud\ d\u00EF\u00BF\u00BDclar\u00EF\u00BF\u00BD\ comme\ parent\ de\ l'instance\ courante\ (this)\r\n\ @param\ _coordonneees\ l'axe\ autour\ duquel\ effectuer\ la\ rotation\r\n\ @param\ _angle\ l'angle\ de\ rotation\ autour\ de\ l'axe\r\n
+comment2.params=
+comment2.target=void\ transforme()
+comment2.text=\r\n\ impl\u00EF\u00BF\u00BDmentation\ de\ la\ m\u00EF\u00BF\u00BDthode\ abstraite\ transfome()\ d\u00EF\u00BF\u00BDclar\u00EF\u00BF\u00BDe\ initialement\ dans\ la\r\n\ classe\ abstraire\ Transformation.\ Elle\ consiste\ \u00EF\u00BF\u00BD\ appeler\ l'instruction\ OpenGL\ \r\n\ glRotatef\ avec\ une\ coordonn\u00EF\u00BF\u00BDe\ repr\u00EF\u00BF\u00BDsentant\ l'angle\ de\ rotation\ et\ trois\ coordonn\u00EF\u00BF\u00BDes\ \r\n\ (float)\ repr\u00EF\u00BF\u00BDsentant\ l'axe\ de\ rotation.\r\n
+numComments=3

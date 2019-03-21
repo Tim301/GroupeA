@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Transformation
+comment0.text=\r\n\ La\ classe\ transformation\ permet\ de\ factoriser\ le\ code\ commun\ aux\ classes\r\n\ filles\ Translation,\ Rotation\ et\ Echelle.\r\n\ Les\ fonctions\ cummunes\ \u00E0\ ces\ transformations\ sont\ principalement\ l'empilement\ et\ \r\n\ le\ d\u00E9pilement\ de\ matrices\r\n\r\n\ @author\ Alexis\ Heloir\r\n\ @version\ 2019/20/03\r\n
+comment1.params=_parent
+comment1.target=Transformation(Noeud)
+comment2.params=
+comment2.target=void\ transforme()
+comment3.params=
+comment3.target=void\ affiche()
+numComments=4

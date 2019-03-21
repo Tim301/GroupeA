@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Noeud
+comment0.text=\r\n\ La\ classe\ noeud\ est\ une\ classe\ abstraite\ en\ amont\ de\ la\ \r\n\ hi\u00EF\u00BF\u00BDrarchie\ de\ classes\ de\ notre\ graphe\ de\ scene.\ Sa\ fonction\r\n\ principale\ est\ de\ porter\ la\ strucutre\ d'arbre\ du\ raphe\ de\ \r\n\ sc\u00EF\u00BF\u00BDne.\ Un\ noeud\ peut\ avoir\ plusieurs\ enfant\ et\ a\ un\ seul\ parent.\r\n\ Seul\ le\ noeud\ d'origine\ de\ la\ Sc\u00EF\u00BF\u00BDne\ n'a\ pas\ de\ parent.\r\n\r\n\ @author\ Alexis\ Heloir\r\n\ @version\ (2019/03/20\r\n
+comment1.params=_parent
+comment1.target=Noeud(Noeud)
+comment1.text=\r\n\ Le\ constructeur\ par\ d\u00EF\u00BF\u00BDfaut\ de\ la\ classe\ Noeud\ prend\ le\ noeud\ parent\ en\ param\u00EF\u00BF\u00BDtre\r\n
+comment2.params=_enfant
+comment2.target=void\ ajouteEnfant(Noeud)
+comment2.text=\r\n\ Ajoute\ le\ Noeud\ _enfant\ pass\u00EF\u00BF\u00BD\ en\ param\u00EF\u00BF\u00BDtre\ \u00EF\u00BF\u00BD\ la\ liste\ d'enfant\ en\ attribut\r\n\ @param\ _enfant\ le\ noeud\ enfant\ \u00EF\u00BF\u00BD\ rajouter\ \u00EF\u00BF\u00BD\ la\ liste\ d'enfants\ m_enfants\r\n
+comment3.params=
+comment3.target=void\ affiche()
+comment3.text=\r\n\ M\u00EF\u00BF\u00BDthode\ abstraite\ en\ charge\ d\u00EF\u00BF\u00BDappeler\ les\ instruction\ openGL\r\n\ permettant\ d'afficher\ le\ noeud\ (m\u00EF\u00BF\u00BDme\ si\ on\ ne\ sait\ pas\ encore\ ce\ qu'il\ \r\n\ repr\u00EF\u00BF\u00BDsente)\r\n
+numComments=4
