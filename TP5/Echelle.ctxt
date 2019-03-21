@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Echelle
+comment0.text=\r\n\ La\ classe\ de\ mise\ \u00E0\ l'echelle\r\n\r\n\ @author\ Alexandre\ Bouton\r\n\ @version\ 20/03/2019\r\n
+comment1.params=_parent\ _ratio
+comment1.target=Echelle(Noeud,\ TP4.Vecteur3D)
+comment1.text=\r\n\ Ce\ constructeur\ fixe\ le\ ratio\ de\ mise\ \u00E0\ l'echelle\ pour\ les\ 3\ axes\ en\ m\u00EAme\ temps\ qu'une\ r\u00E9f\u00E9rence\r\n\ vers\ l'instance\ de\ noeud\ parent\r\n\ @param\ _parent\ le\ noeud\ d\u00E9clar\u00E9\ comme\ parent\ de\ l'instant\ courante\ (this)\r\n\ @param\ _axe\ axe\ sur\ lequel\ on\ applique\ la\ mise\ \u00E0\ l'echelle\r\n
+comment2.params=
+comment2.target=void\ transforme()
+numComments=3

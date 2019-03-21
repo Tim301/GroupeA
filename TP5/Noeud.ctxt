@@ -1,7 +1,10 @@
 #BlueJ class context
 comment0.target=Noeud
-comment0.text=\r\n\ Abstract\ class\ Noeud\ -\ write\ a\ description\ of\ the\ class\ here\r\n\r\n\ @author\ (your\ name\ here)\r\n\ @version\ (version\ number\ or\ date\ here)\r\n
-comment1.params=y
-comment1.target=int\ sampleMethod(int)
-comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
-numComments=2
+comment0.text=\r\n\ La\ classe\ noeud\ est\ une\ classe\ abstraite\ en\ amont\ de\ la\r\n\ hi\u00E9rarchie\ de\ classes\ de\ notre\ graphe\ de\ sc\u00E8ne.\ Sa\ fonction\ principale\r\n\ est\ de\ porter\ la\ structure\ d'arbre\ de\ graphe\r\n\ de\ sc\u00E8ne.\ Un\ noeud\ peut\ avoir\ plusieurs\ enfants\ et\ a\ un\ seul\ parent.\r\n\ Seul\ un\ noeud\ d'origine\ de\ la\ c\u00E8ne\ n'a\ pas\ de\ parent.\r\n\r\n\ @author\ Alexandre\ Bouton\r\n\ @version\ 20-03-2019\r\n
+comment1.params=_parent
+comment1.target=Noeud(Noeud)
+comment1.text=\r\n\ Le\ constructeur\ par\ d\u00E9faut\ de\ la\ classe\ noeud\ prend\ un\ noeud\r\n
+comment2.params=
+comment2.target=void\ affiche()
+comment2.text=\r\n\ M\u00E9thode\ abstraite\ en\ charge\ d'appeler\ les\ instructions\ openGL\ permettant\ d'afficher\r\n\ le\ noeud(m\u00EAme\ si\ on\ ne\ sait\ pas\ encore\ ce\ qu'il\ repr\u00E9sente\ \u00E0\ ce\ niveau\ l\u00E0.\ C'est\r\n\ pour\ cela\ qu'elle\ est\ abstraite)\r\n
+numComments=3

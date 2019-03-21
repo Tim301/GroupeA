@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Translation
+comment0.text=\r\n\ La\ classe\ translation\ applique\ une\ translation\ d\u00E9finie\ par\ l'attribut\r\n\ m_coordonnees\r\n\r\n\ @author\ Alexandre\ Bouton\r\n\ @version\ 20-03-2019\r\n
+comment1.params=_parent\ _coordonnees
+comment1.target=Translation(Noeud,\ TP4.Vecteur3D)
+comment1.text=\r\n\ Ce\ constructeur\ fixe\ les\ coordonnees\ de\ translation\ en\ m\u00EAme\ temps\ qu'une\ r\u00E9f\u00E9rence\r\n\ vers\ l'instance\ de\ noeud\ parent\r\n\ @param\ _parent\ le\ noeud\ d\u00E9clar\u00E9\ comme\ parent\ de\ l'instant\ courante\ (this)\r\n\ @param\ _coordonnes\ les\ coordonn\u00E9es\ de\ translation\ \u00E0\ appliquer\r\n
+comment2.params=
+comment2.target=void\ transforme()
+comment2.text=\r\n\ Impl\u00E9mentation\ de\ la\ m\u00E9thode\ abstraite\ transforme()\ d\u00E9clar\u00E9e\ initialement\ dans\ la\ classe\ abstraite\ transformation.\ Elle\ consiste\r\n\ \u00E0\ appelerl'instruction\ OpenGL\ gltranslatef\ avec\ 3\ coordonn\u00E9es\ (float)\r\n
+numComments=3

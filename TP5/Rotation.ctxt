@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Rotation
+comment0.text=\r\n\ La\ classe\ de\ rotation\ va\ appliquer\ une\ roation\ \u00E0\ l'objet\ avec\ les\ attribut\ d'angle\ et\ d'axe\r\n\r\n\ @author\ Alexandre\ Bouton\r\n\ @version\ 20/03/2019\r\n
+comment1.params=_parent\ _angle\ _axe
+comment1.target=Rotation(Noeud,\ float,\ TP4.Vecteur3D)
+comment1.text=\r\n\ Ce\ constructeur\ fixe\ l'angle\ et\ les\ coordonn\u00E9es\ de\ rotation\ en\ m\u00EAme\ temps\ qu'une\ r\u00E9f\u00E9rence\r\n\ vers\ l'instance\ de\ noeud\ parent\r\n\ @param\ _parent\ le\ noeud\ d\u00E9clar\u00E9\ comme\ parent\ de\ l'instant\ courante\ (this)\r\n\ @param\ _angle\ l'ange\r\n\ @param\ _coordonnes\ les\ coordonn\u00E9es\ de\ translation\ \u00E0\ appliquer\r\n
+comment2.params=
+comment2.target=void\ transforme()
+numComments=3
