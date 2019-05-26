@@ -1,10 +1,13 @@
 #BlueJ class context
 comment0.target=LumiereDirectionelle
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ LumierePonctuelle\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Une\ lumi\u00E8re\ directionelle\ repr\u00E9sente\ une\ source\ de\ lumi\u00E8re\ \r\n\ situ\u00E9e\ \u00E0\ l'infini\ \:\ tous\ les\ rayons\ \u00E9mis\ par\ cette\ lumi\u00E8re\ sont\ parall\u00E8les\r\n\ et\ leur\ direction\ est\ donn\u00E9e\ par\ un\ vecteur\ de\ dimension\ trois.\r\n\r\n\ @author\ Alexis\ Heloir\r\n\ @version\ 19/03/2019\r\n
 comment1.params=_vecteurAmbiant\ _vecteurDiffus\ _vecteurSpeculaire\ _direction
-comment1.target=LumiereDirectionelle(TP3.Vecteur3D,\ TP3.Vecteur3D,\ TP3.Vecteur3D,\ TP3.Vecteur3D)
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ LumierePonctuelle\r\n
+comment1.target=LumiereDirectionelle(Vecteur3D,\ Vecteur3D,\ Vecteur3D,\ Vecteur3D)
+comment1.text=\r\n\ Constructeur\ de\ la\ classe\ LumiereDirectionelle,\ il\ prend\ quatre\ arguments\r\n\ @param\ _vecteurAmbiant\ composante\ ambiante\ de\ la\ lumi\u00E8re\r\n\ @param\ _vecteurDiffus\ composante\ diffuse\ de\ la\ lumi\u00E8re\r\n\ @param\ _vecteurSpeculaire\ composante\ speculaire\ de\ la\ lumi\u00E8re\r\n\ @param\ _direction\ vecteur\ donnant\ la\ direction\ des\ rayons\ \u00E9mis\r\n
 comment2.params=
-comment2.target=void\ initialise()
-comment2.text=\r\n\ On\ initialise\ la\ valeur\ du\ vecteur\ de\ direction\ pour\ cette\ instance\ de\ classe\ \r\n\ de\ lumi\u00E8re\ directionelle\ apr\u00E8s\ avoir\ appel\u00E9\ la\ m\u00E9thode\ d'initialisation\ de\ la\ \r\n\ classe\ parente\r\n
-numComments=3
+comment2.target=LumiereDirectionelle()
+comment2.text=\r\n\ Constructeur\ par\ d\u00E9faut\ de\ la\ classe\ LumiereDirectionelle,\ il\ ne\ prend\ pas\ d'argument.\r\n\ Il\ place\ une\ lumi\u00E8re\ directionelle\ qui\ simule\ la\ lumi\u00E8re\ d'un\ soleil\ au\ zenith\r\n
+comment3.params=
+comment3.target=void\ initialise()
+comment3.text=\r\n\ On\ initialise\ la\ valeur\ du\ vecteur\ de\ direction\ pour\ cette\ instance\ de\ classe\ \r\n\ de\ lumi\u00E8re\ directionelle\ apr\u00E8s\ avoir\ appel\u00E9\ la\ m\u00E9thode\ d'initialisation\ de\ la\ \r\n\ classe\ parente\r\n
+numComments=4

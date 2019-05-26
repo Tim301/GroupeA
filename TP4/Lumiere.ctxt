@@ -1,11 +1,11 @@
 #BlueJ class context
 comment0.target=Lumiere
-comment0.text=\r\n\ Classe\ lumi\u00E8re.\ Cette\ classe\ est\ abstraite,\ elle\ sert\ \u00E0\ \r\n\ factoriser\ les\ attibuts\ communs\ \u00E0\ toutes\ les\ lumi\u00E8res\ \:\r\n\ la\ composante\ ambiante,\ la\ composante\ sp\u00E9culaire\ et\ la\ \r\n\ composante\ diffuse\r\n\r\n\ @author\ (Alexis\ Heloir)\r\n\ @version\ (06/02/2018)\r\n
+comment0.text=\r\n\ Classe\ lumi\u00E8re.\ Cette\ classe\ est\ abstraite,\ elle\ sert\ \u00E0\ \r\n\ factoriser\ les\ attibuts\ communs\ \u00E0\ toutes\ les\ lumi\u00E8res\ \:\r\n\ la\ composante\ ambiante,\ la\ composante\ sp\u00E9culaire\ et\ la\ \r\n\ composante\ diffuse\r\n\r\n\ @author\ (Alexis\ Heloir)\r\n\ @version\ (06/02/2019)\r\n
 comment1.params=
 comment1.target=Lumiere()
 comment1.text=\r\n\ Ce\ constructeur\ assigne\ une\ parmi\ les\ 8\ lumi\u00E8res\ \r\n\ disponibles\ en\ OpenGL1.1.\ Le\ compteur\ m_currentLight\ \r\n\ est\ statique,\ c'est\ \u00E0\ dire\ que\ toutes\ les\ instances\ de\ \r\n\ la\ classe\ lumi\u00E8re\ partagent\ la\ valeur\ de\ m_currentLight.\r\n\ Chaque\ instance\ connait\ donc\ le\ nombre\ de\ lumi\u00E8res\ d\u00E9j\u00E0\ \r\n\ instanci\u00E9es.\r\n
 comment2.params=_vecteurAmbiant\ _vecteurDiffus\ _vecteurSpeculaire
-comment2.target=Lumiere(TP3.Vecteur3D,\ TP3.Vecteur3D,\ TP3.Vecteur3D)
+comment2.target=Lumiere(Vecteur3D,\ Vecteur3D,\ Vecteur3D)
 comment2.text=\r\n\ Constructeur\ de\ la\ classe\ lumi\u00E8re\ prenant\ en\ param\u00E8tres\ trois\ \r\n\ instances\ de\ Vecteur3D\ pour\ les\ composantes\ ambiantes,\ diffuses\ \r\n\ et\ sp\u00E9culaire\ de\ la\ lumi\u00E8re\r\n\ \r\n\ @param\ _vecteurAmbiant\ la\ composante\ ambiante\ de\ la\ lumi\u00E8re\ (Vecteur3D)\r\n\ @param\ _vecteurDiffus\ la\ composante\ diffuse\ de\ la\ lumi\u00E8re\ (Vecteur3D)\r\n\ @param\ _vecteurSpeculaire\ la\ composante\ speculaire\ de\ la\ lumi\u00E8re\ (Vecteur3D)\r\n
 comment3.params=
 comment3.target=void\ initialise()

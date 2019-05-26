@@ -1,10 +1,13 @@
 #BlueJ class context
 comment0.target=LumierePonctuelle
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ LumerePonctuelle\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=LumierePonctuelle()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ LumerePonctuelle\r\n
-comment2.params=y
-comment2.target=int\ sampleMethod(int)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
-numComments=3
+comment0.text=\r\n\ La\ classe\ LumierePonctuelle\ repr\u00E9sente\ une\ source\ de\ lumi\u00E8re\ ponctuelle.\r\n\ Elle\ est\ d\u00E9finie\ par\ un\ point\ dans\ l'espace\ \u00E0\ partir\ duquel\ vont\ irradier\r\n\ les\ rayons\ \u00E9mis\ par\ cette\ source\ lumineuse\ ponctuelle\r\n\r\n\ @author\ Alexis\ Heloir\r\n\ @version\ 2019/03/19\r\n
+comment1.params=_vecteurAmbiant\ _vecteurDiffus\ _vecteurSpeculaire\ _position
+comment1.target=LumierePonctuelle(Vecteur3D,\ Vecteur3D,\ Vecteur3D,\ Vecteur3D)
+comment1.text=\r\n\ Constructeur\ de\ la\ classe\ LumierePonctuelle,\ il\ prend\ quatre\ arguments\r\n\ @param\ _vecteurAmbiant\ composante\ ambiante\ de\ la\ lumi\u00E8re\r\n\ @param\ _vecteurDiffus\ composante\ diffuse\ de\ la\ lumi\u00E8re\r\n\ @param\ _vecteurSpeculaire\ composante\ speculaire\ de\ la\ lumi\u00E8re\r\n\ @param\ _position\ vecteur\ donnant\ la\ direction\ des\ rayons\ \u00E9mis\r\n
+comment2.params=
+comment2.target=LumierePonctuelle()
+comment2.text=\r\n\ Constructeur\ par\ d\u00E9faut\ de\ la\ classe\ LumierePonctuelle,\ il\ ne\ prend\ pas\ d'argument.\r\n\ Il\ place\ une\ lumi\u00E8re\ ponctuelle\ \u00E0\ l'origine\ du\ syst\u00E8me\ de\ coordonn\u00E9es\ (0.0f,0.0f,0.0f)\r\n
+comment3.params=
+comment3.target=void\ initialise()
+comment3.text=\r\n\ On\ initialise\ la\ valeur\ du\ vecteur\ de\ position\ pour\ cette\ instance\ de\ classe\ \r\n\ de\ lumi\u00E8re\ ponctuelle\ apr\u00E8s\ avoir\ appel\u00E9\ la\ m\u00E9thode\ d'initialisation\ de\ la\ \r\n\ classe\ parente\r\n
+numComments=4

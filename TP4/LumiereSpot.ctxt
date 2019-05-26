@@ -1,10 +1,13 @@
 #BlueJ class context
 comment0.target=LumiereSpot
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ LumiereSpot\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ classe\ spot\ repr\u00E9sente\ une\ lumi\u00E8re\ ponctuelle\ qui\ \r\n\ diffuse\ un\ faisceau\ de\ lumi\u00E8re\ selon\ une\ direction\ \r\n\ et\ un\ angle\ de\ diffusion\ (GL_SPOT_CUTOFF).\ Un\ troisi\u00E8me\r\n\ param\u00E8tre\ (GL_SPOT_EXPONENT)\ d\u00E9termine\ l'att\u00E9nuation\ de\r\n\ l'intensit\u00E9\ lumineuse\ lorsque\ la\ direction\ des\ rayons\ \r\n\ s'\u00E9carte\ de\ la\ direction\ principale\ (GL_SPOT_DIRECTION)\r\n\r\n\ @author\ Alexis\ Heloir\r\n\ @version\ 2019/03/19\r\n
 comment1.params=
 comment1.target=LumiereSpot()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ LumiereSpot\r\n
-comment2.params=y
-comment2.target=int\ sampleMethod(int)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
-numComments=3
+comment1.text=\r\n\ Constructeur\ par\ d\u00E9faut\ de\ la\ classe\ LumiereSpot,\ il\ ne\ prend\ pas\ d'argument.\r\n\ Il\ place\ une\ lumi\u00E8re\ spot\ au\ centre\ du\ syst\u00E8me\ de\ coordonn\u00E9es\ local\ \r\n\ orient\u00E9e\ selon\ les\ z\ n\u00DFegatifs\ (droit\ devant)\r\n
+comment2.params=_vecteurAmbiant\ _vecteurDiffus\ _vecteurSpeculaire\ _position\ _spotDirection\ _cutoff\ _spotExponent
+comment2.target=LumiereSpot(Vecteur3D,\ Vecteur3D,\ Vecteur3D,\ Vecteur3D,\ Vecteur3D,\ float,\ float)
+comment2.text=\r\n\ Constructeur\ de\ la\ classe\ LumierePonctuelle,\ il\ prend\ sept\ arguments\r\n\ @param\ _vecteurAmbiant\ composante\ ambiante\ de\ la\ lumi\u00E8re\r\n\ @param\ _vecteurDiffus\ composante\ diffuse\ de\ la\ lumi\u00E8re\r\n\ @param\ _vecteurSpeculaire\ composante\ speculaire\ de\ la\ lumi\u00E8re\r\n\ @param\ _position\ vecteur\ donnant\ la\ direction\ des\ rayons\ \u00E9mis\r\n\ @param\ _spotDirection\ vecteur\ donnant\ la\ direction\ du\ faisceau\ du\ spot\r\n\ @param\ _spotCutoff\ r\u00E9el\ donnant\ l'angle\ d'ouverture\ du\ spot\r\n\ @param\ _spotExponent\ r\u00E9el\ donnant\ l'att\u00E9nuation\ des\ rayons\ s'\u00E9cartant\ de\ la\ direction\ principale\r\n
+comment3.params=
+comment3.target=void\ initialise()
+comment3.text=\r\n\ On\ initialise\ les\ valeurs\ du\ vecteur\ de\ direction,\ de\ cutoff\ et\ d'exponent\ pour\ cette\ instance\ \r\n\ de\ classe\ de\ lumi\u00E8re\ ponctuelle\ apr\u00E8s\ avoir\ appel\u00E9\ la\ m\u00E9thode\ d'initialisation\ de\ la\ \r\n\ classe\ parente\r\n
+numComments=4
