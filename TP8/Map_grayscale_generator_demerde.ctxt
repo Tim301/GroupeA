@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Map_grayscale_generator_demerde
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Map_grayscale_generator_demerde\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=_parent
+comment1.target=Map_grayscale_generator_demerde(TP6.Noeud)
+comment1.text=\r\n\ Le\ constructeur\ de\ carte.\ La\ carte\ doit\ etre\ dans\ le\ dossier\ "TP8"\r\n\ @param\ _parent\ le\ noeud\ parent\ \r\n\ @param\ name,\ le\ nom\ du\ fichier\r\n
+comment2.params=
+comment2.target=void\ dessine()
+numComments=3

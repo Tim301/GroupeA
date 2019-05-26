@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Calm
+comment1.params=tmp
+comment1.target=Calm(boolean)
+comment2.params=
+comment2.target=void\ run()
+comment3.params=
+comment3.target=void\ exit()
+numComments=4

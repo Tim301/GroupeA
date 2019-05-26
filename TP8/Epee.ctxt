@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Epee
+comment0.text=\r\n\ La\ classe\ epee\ place\ une\ epee\ dans\ le\ monde\ selon\ le\ tableau\ de\ valeur\ ci-dessous,\ dans\ son\ constructeur\ et\ lui\ applique\ les\ couleurs\r\n\ decrites\ dans\ le\ tableau\ de\ couleur.\ Par\ defaut,\ l'epee\ est\ en\ diamant\r\n\r\n\ @author\ Alexandre\ Bouton\r\n\ @version\ 2019/03/29\r\n
+comment1.params=_parent
+comment1.target=Epee(TP6.Noeud)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ carr\u00E9\r\n
+comment2.params=
+comment2.target=void\ dessine()
+comment2.text=\r\n\ La\ methode\ dessine\ les\ 4\ carres\ que\ nous\ avons\ instancie\ dans\ les\ constructeurs\r\n\r\n
+numComments=3

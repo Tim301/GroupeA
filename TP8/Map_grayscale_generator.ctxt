@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Map_grayscale_generator
+comment0.text=\r\n\ Le\ generateur\ de\ carte\ utilise\ une\ image\ sous\ le\ format\ pgm,\ qui\ est\ un\ type\ d'image\ non\ compresse\ en\ niveau\ de\ gris\r\n\r\n\ @author\ Alexandre\ Bouton\r\n\ @version\ 2019/04/18\r\n
+comment1.params=_parent\ name
+comment1.target=Map_grayscale_generator(TP6.Noeud,\ java.lang.String)
+comment1.text=\r\n\ Le\ constructeur\ de\ carte.\ La\ carte\ doit\ etre\ dans\ le\ dossier\ "TP8"\r\n\ @param\ _parent\ le\ noeud\ parent\ \r\n\ @param\ name,\ le\ nom\ du\ fichier\r\n
+comment2.params=
+comment2.target=void\ dessine()
+numComments=3

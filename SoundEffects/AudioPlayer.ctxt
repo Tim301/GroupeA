@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=AudioPlayer
+comment0.text=\r\n\ This\ is\ an\ example\ program\ that\ demonstrates\ how\ to\ play\ back\ an\ audio\ file\r\n\ using\ the\ Clip\ in\ Java\ Sound\ API.\r\n\ @author\ www.codejava.net\r\n\r\n
+comment1.params=audioFilePath
+comment1.target=void\ play(java.lang.String)
+comment1.text=\r\n\ Play\ a\ given\ audio\ file.\r\n\ @param\ audioFilePath\ Path\ of\ the\ audio\ file.\r\n
+comment2.params=
+comment2.target=void\ stop()
+numComments=3
