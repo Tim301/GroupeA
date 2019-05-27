@@ -4,22 +4,17 @@ import org.lwjgl.opengl.GL11;
 
 import java.awt.image.BufferedImage;
 
-import java.util.HashMap;
 
 /**
- * CubeTexture optimise qui ne charge qu'une fois la texture pour tous les blocs
+ * Write a description of class CubeTexture here.
  *
- * @Alexis Heloir
+ * @author (your name)
  * @version (a version number or a date)
  */
-public class CubeTexture extends Objet
+public class CubeTextureParFace extends Objet
 {
 
-    //private int m_textureID; // Storage For One Texture ( NEW )
-    private String m_imagePath;
-    private static HashMap<String,Integer> m_textureDict = new HashMap<String,Integer>();
-
-    //private static
+    private int m_textureID;         // Storage For One Texture ( NEW )            
 
     /**
      * Constructeur de CubeTexture prenant en paramètre une chemin vers une texture.
@@ -27,36 +22,28 @@ public class CubeTexture extends Objet
      * @param _parent le noeud parent dans le graphe de scène
      * @param _texturePath le chemin vers la texture à appliquer au cube
      */
-    public CubeTexture(Noeud _parent, String _texturePath)
+    public CubeTextureParFace(Noeud _parent, String _texturePath)
     {
-        super(_parent);
-        if ( m_textureDict.get(_texturePath) == null )
-        {
-            TextureLoader myTextureLoader;
-            BufferedImage image = TextureLoader.loadImage(_texturePath);//The path is inside the jar file
-            m_textureDict.put(_texturePath, TextureLoader.loadTexture(image));
-        }
-        m_imagePath = _texturePath;
-
+        super(_parent);        
+        TextureLoader myTextureLoader;
+        BufferedImage image = TextureLoader.loadImage(_texturePath);//The path is inside the jar file
+        m_textureID = TextureLoader.loadTexture(image);
     }
-
-
+    
+    
+    
     /**
      * Constructor for objects of class CubeTexture
      */
-    public CubeTexture(Noeud _parent)
+    public CubeTextureParFace(Noeud _parent)
     {
-
         super(_parent);
-        if ( m_textureDict.get("/TP1/res/cobble.png") == null )
-        {
-            TextureLoader myTextureLoader;
-            BufferedImage image = TextureLoader.loadImage("/TP1/res/cobble.png");//The path is inside the jar file
-            m_textureDict.put("/TP1/res/cobble.png", TextureLoader.loadTexture(image));
-        }
-        m_imagePath = "/TP1/res/cobble.png";
+        
+        TextureLoader myTextureLoader;
+        BufferedImage image = TextureLoader.loadImage("/TP6/res/cubemap.png");//The path is inside the jar file
+        m_textureID = TextureLoader.loadTexture(image);
 
-
+        
     }
 
     /**
@@ -64,72 +51,72 @@ public class CubeTexture extends Objet
      * Vous trouverez ces instructions dans la clase OpenGL en vrac du package TP2.
      */
     public void dessine(){
-
-        GL11.glBindTexture(GL11.GL_TEXTURE_2D, m_textureDict.get(m_imagePath)); // Select Our Texture
-
+        
+        GL11.glBindTexture(GL11.GL_TEXTURE_2D, m_textureID); // Select Our Texture        
+        
         GL11.glBegin(GL11.GL_QUADS);
         // Front Face
         //GL11.glColor3f(0.5f,0.5f,0.5f);
         GL11.glNormal3f( 0.0f, 0.0f, 1.0f);
-        GL11.glTexCoord2f(0.0f, 1.0f);
+        GL11.glTexCoord2f(0.0f, 0.666f);
         GL11.glVertex3f(-1.0f, -1.0f, 1.0f); // Bottom Left Of The Texture and Quad
-        GL11.glTexCoord2f(1.0f, 1.0f);
+        GL11.glTexCoord2f(0.25f, 0.66f);
         GL11.glVertex3f(1.0f, -1.0f, 1.0f); // Bottom Right Of The Texture and Quad
-        GL11.glTexCoord2f(1.0f, 0.0f);
+        GL11.glTexCoord2f(0.25f, 0.33f);
         GL11.glVertex3f(1.0f, 1.0f, 1.0f); // Top Right Of The Texture and Quad
-        GL11.glTexCoord2f(0.0f, 0.0f);
+        GL11.glTexCoord2f(0.0f, 0.33f);
         GL11.glVertex3f(-1.0f, 1.0f, 1.0f); // Top Left Of The Texture and Quad
         // Back Face
-        GL11.glNormal3f( 0.0f, 0.0f, -1.0f);
-        GL11.glTexCoord2f(1.0f, 1.0f);
+        GL11.glNormal3f( 0.0f, 0.0f, -1.0f);        
+        GL11.glTexCoord2f(0.5f, 0.666f);
         GL11.glVertex3f(-1.0f, -1.0f, -1.0f); // Bottom Right Of The Texture and Quad
-        GL11.glTexCoord2f(1.0f, 0.0f);
+        GL11.glTexCoord2f(0.75f, 0.666f);
         GL11.glVertex3f(-1.0f, 1.0f, -1.0f); // Top Right Of The Texture and Quad
-        GL11.glTexCoord2f(0.0f, 0.0f);
+        GL11.glTexCoord2f(0.75f, 0.333f);
         GL11.glVertex3f(1.0f, 1.0f, -1.0f); // Top Left Of The Texture and Quad
-        GL11.glTexCoord2f(0.0f, 1.0f);
+        GL11.glTexCoord2f(0.5f, 0.333f);
         GL11.glVertex3f(1.0f, -1.0f, -1.0f); // Bottom Left Of The Texture and Quad
         // Top Face
-        GL11.glNormal3f( 0.0f, 1.0f, 0.0f);
-        GL11.glTexCoord2f(0.0f, 0.0f);
+        GL11.glNormal3f( 0.0f, 1.0f, 0.0f);        
+        GL11.glTexCoord2f(0.25f, 1.0f);
         GL11.glVertex3f(-1.0f, 1.0f, -1.0f); // Top Left Of The Texture and Quad
-        GL11.glTexCoord2f(0.0f, 1.0f);
+        GL11.glTexCoord2f(0.5f, 1.0f);
         GL11.glVertex3f(-1.0f, 1.0f, 1.0f); // Bottom Left Of The Texture and Quad
-        GL11.glTexCoord2f(1.0f, 1.0f);
+        GL11.glTexCoord2f(0.75f, 0.666f);
         GL11.glVertex3f(1.0f, 1.0f, 1.0f); // Bottom Right Of The Texture and Quad
-        GL11.glTexCoord2f(1.0f, 0.0f);
+        GL11.glTexCoord2f(0.75f, 0.666f);
         GL11.glVertex3f(1.0f, 1.0f, -1.0f); // Top Right Of The Texture and Quad
         // Bottom Face
         GL11.glNormal3f( 0.0f, -1.0f, 0.0f);
-        GL11.glTexCoord2f(1.0f, 0.0f);
+        GL11.glTexCoord2f(0.25f, 0.333f);
         GL11.glVertex3f(-1.0f, -1.0f, -1.0f); // Top Right Of The Texture and Quad
-        GL11.glTexCoord2f(0.0f, 0.0f);
+        GL11.glTexCoord2f(0.5f, 0.333f);
         GL11.glVertex3f(1.0f, -1.0f, -1.0f); // Top Left Of The Texture and Quad
-        GL11.glTexCoord2f(0.0f, 1.0f);
+        GL11.glTexCoord2f(0.5f, 0.333f);
         GL11.glVertex3f(1.0f, -1.0f, 1.0f); // Bottom Left Of The Texture and Quad
-        GL11.glTexCoord2f(1.0f, 1.0f);
+        GL11.glTexCoord2f(0.25f, 0.333f);
         GL11.glVertex3f(-1.0f, -1.0f, 1.0f); // Bottom Right Of The Texture and Quad
         // Right face
-        GL11.glNormal3f( 1.0f, 0.0f, 0.0f);
-        GL11.glTexCoord2f(1.0f, 1.0f);
+        GL11.glNormal3f( 1.0f, 0.0f, 0.0f);        
+        GL11.glTexCoord2f(0.25f, 0.666f);
         GL11.glVertex3f(1.0f, -1.0f, -1.0f); // Bottom Right Of The Texture and Quad
-        GL11.glTexCoord2f(1.0f, 0.0f);
+        GL11.glTexCoord2f(0.5f, 0.666f);
         GL11.glVertex3f(1.0f, 1.0f, -1.0f); // Top Right Of The Texture and Quad
-        GL11.glTexCoord2f(0.0f, 0.0f);
+        GL11.glTexCoord2f(0.5f, 0.333f);
         GL11.glVertex3f(1.0f, 1.0f, 1.0f); // Top Left Of The Texture and Quad
-        GL11.glTexCoord2f(0.0f, 1.0f);
+        GL11.glTexCoord2f(0.25f, 0.333f);
         GL11.glVertex3f(1.0f, -1.0f, 1.0f); // Bottom Left Of The Texture and Quad
         // Left Face
-        GL11.glNormal3f( -1.0f, 0.0f, 0.0f);
-        GL11.glTexCoord2f(0.0f, 1.0f);
+        GL11.glNormal3f( -1.0f, 0.0f, 0.0f);        
+        GL11.glTexCoord2f(0.75f, 0.666f);
         GL11.glVertex3f(-1.0f, -1.0f, -1.0f); // Bottom Left Of The Texture and Quad
-        GL11.glTexCoord2f(1.0f, 1.0f);
+        GL11.glTexCoord2f(1.0f, 0.666f);
         GL11.glVertex3f(-1.0f, -1.0f, 1.0f); // Bottom Right Of The Texture and Quad
-        GL11.glTexCoord2f(1.0f, 0.0f);
+        GL11.glTexCoord2f(1.0f, 0.333f);
         GL11.glVertex3f(-1.0f, 1.0f, 1.0f); // Top Right Of The Texture and Quad
-        GL11.glTexCoord2f(0.0f, 0.0f);
+        GL11.glTexCoord2f(0.75f, 0.333f);
         GL11.glVertex3f(-1.0f, 1.0f, -1.0f); // Top Left Of The Texture and Quad
-        GL11.glEnd();
+        GL11.glEnd();        
     }
-
+    
 }

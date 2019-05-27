@@ -1,11 +1,11 @@
 #BlueJ class context
-comment0.target=CubeTexture
+comment0.target=CubeTextureParFace
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ CubeTexture\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=_parent\ _texturePath
-comment1.target=CubeTexture(Noeud,\ java.lang.String)
+comment1.target=CubeTextureParFace(Noeud,\ java.lang.String)
 comment1.text=\r\n\ Constructeur\ de\ CubeTexture\ prenant\ en\ param\u00E8tre\ une\ chemin\ vers\ une\ texture.\r\n\ Cette\ texture\ sera\ propre\ au\ cube.\r\n\ @param\ _parent\ le\ noeud\ parent\ dans\ le\ graphe\ de\ sc\u00E8ne\r\n\ @param\ _texturePath\ le\ chemin\ vers\ la\ texture\ \u00E0\ appliquer\ au\ cube\r\n
 comment2.params=_parent
-comment2.target=CubeTexture(Noeud)
+comment2.target=CubeTextureParFace(Noeud)
 comment2.text=\r\n\ Constructor\ for\ objects\ of\ class\ CubeTexture\r\n
 comment3.params=
 comment3.target=void\ dessine()

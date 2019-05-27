@@ -8,8 +8,8 @@ import TP4.Vecteur3D;
  * La classe translation applique une translation d�finie par
  * l'attribut m_coordonnees
  *
- * @author Alexis Heloir
- * @version 2019/03/20
+ * @author Alexis Heloir, Alexandre Bouton, Timothee Bastin
+ * @version 2019/05/22
  */
 public class Translation extends Transformation
 {
@@ -48,5 +48,42 @@ public class Translation extends Transformation
     public void transforme()
     {
         GL11.glTranslatef(m_coordonnees.getX(),m_coordonnees.getY(),m_coordonnees.getZ());
+    }
+    
+    /**
+     * Implementation des fonctions servant au mouvement.
+     * 
+     * Les fonctions qui suivent sont appellees lorsqu'une touche de clavier est presee
+     * Selon la touche, on appelle une fonction ou l'autre et on deplace le terrain jusqu'a ce que la touche soit relachee
+     * 
+     */
+    public void avanceZ(float _valeur)
+    {
+        m_coordonnees = new Vecteur3D(m_coordonnees.getX(), m_coordonnees.getY(),m_coordonnees.getZ() + _valeur);
+    }
+    
+        public void reculeZ(float _valeur)
+    {
+        m_coordonnees = new Vecteur3D(m_coordonnees.getX(), m_coordonnees.getY(),m_coordonnees.getZ() - _valeur);
+    }
+    
+        public void gaucheX(float _valeur)
+    {
+        m_coordonnees = new Vecteur3D(m_coordonnees.getX() + _valeur, m_coordonnees.getY(),m_coordonnees.getZ());
+    }
+    
+        public void droiteX(float _valeur)
+    {
+        m_coordonnees = new Vecteur3D(m_coordonnees.getX() - _valeur, m_coordonnees.getY(),m_coordonnees.getZ());
+    }
+    
+    public void monterY(float _valeur)
+    {
+        m_coordonnees = new Vecteur3D(m_coordonnees.getX(), m_coordonnees.getY() - _valeur,m_coordonnees.getZ());
+    }
+    
+    public void descendreY(float _valeur)
+    {
+        m_coordonnees = new Vecteur3D(m_coordonnees.getX(), m_coordonnees.getY() + _valeur,m_coordonnees.getZ());
     }
 }
