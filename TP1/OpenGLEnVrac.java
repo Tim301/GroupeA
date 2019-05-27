@@ -1,4 +1,3 @@
-
 package TP1;
 
 
@@ -29,7 +28,7 @@ import java.io.*;
  *   <li> les transformations affines dans le mode <b>MODELVIEW</b>,
  *   <li> la définition des paramètres de caméra dans le mode <b>PROJECTION<b/>,
  *   <li> les transformations affines dans le <b>MODELVIEW</b>,
- *   <li> l'empilement et le dépilement de matrices.
+ *   <li> l'empilement et le dépilement de textures.
  * </ul>
  */
 
@@ -47,14 +46,10 @@ public class OpenGLEnVrac {
 
     private boolean light;         // Lighting ON/OFF    
     
-    //Parametres d'eclairement
     private float[] lightAmbient = {1.0f,1.0f,1.0f,1.0f};
-    //Ajout de couleurs
-    private float[] lightDiffuse = {0.8f,0.0f,0.7f,0.0f}; // {R, G, B, toujours_0}
-    //Declaration de la composante speculaire
-    private float[] lightSpecularComponent = {1.0f, 1.0f, 1.0f, 0.0f}; // {R,G,B, toujours_0}. Ici, la composante speculaire est blanche
-    //Position de a lumière
-    private float[] lightPosition = {0.0f,1000.0f,0.0f,1.0f}; //Lors que le dernier composant est a 1, la lumière est ponctuelle. Si il est a 0, la lumiere est directionnelle
+    private float[] lightDiffuse = {1.0f,1.0f,1.0f,1.0f};
+
+    private float[] lightPosition = {0.0f,0.0f,5.0f,1.0f};
 
     private boolean filter = false;
     
@@ -145,12 +140,7 @@ public class OpenGLEnVrac {
 
         GL11.glLoadIdentity();                          // Reset The Current Modelview Matrix
 
-        //Translation de tous les objets pour reculer les objets pour qu'ils soient visibles et centres
-        GL11.glTranslatef(1.5f, 0.0f, -8.0f); // Move Into The Screen 5 Units
-        
-        //PushMaxtrx memorise l'etat de mon repere courant. En l'occurence, le repere courant a ce moment du code est le repere donne par le gjTranslate, soit (0,0,-8).
-        //A chaque fois qu'on rempli des coordonnees, on change de repere courant
-        GL11.glPushMatrix();
+        GL11.glTranslatef(0.0f, 0.0f, -6.0f); // Move Into The Screen 5 Units
         GL11.glRotatef(xrot, 1.0f, 0.0f, 0.0f); // Rotate On The X Axis
         GL11.glRotatef(yrot, 0.0f, 1.0f, 0.0f); // Rotate On The Y Axis
         GL11.glRotatef(zrot, 0.0f, 0.0f, 1.0f); // Rotate On The Z Axis        
@@ -169,7 +159,6 @@ public class OpenGLEnVrac {
         GL11.glBegin(GL11.GL_QUADS);
         // Front Face
         //GL11.glColor3f(0.5f,0.5f,0.5f);
-        //Creation du cube 1
         GL11.glNormal3f( 0.0f, 0.0f, 1.0f);
         GL11.glTexCoord2f(0.0f, 1.0f);
         GL11.glVertex3f(-1.0f, -1.0f, 1.0f); // Bottom Left Of The Texture and Quad
@@ -231,79 +220,10 @@ public class OpenGLEnVrac {
         GL11.glVertex3f(-1.0f, 1.0f, -1.0f); // Top Left Of The Texture and Quad
         GL11.glEnd();
 
-        //Animation. On modifie la rotation a chaque fois qu'on recharge la scene, donc a chaque image
-        xrot += 0.081f; // X Axis Rotation
-        yrot += 0.12f; // Y Axis Rotation
-        zrot += 0.02f; // Z Axis Rotation
-        
-        //On reommence a travailler dans le repere courant qu'on avait memorise juste avant avec PushMatrix
-        GL11.glPopMatrix();
-        
-        //Application d'une translation au cube SUIVANT en X
-        //Lorsqu'on quand un état, tout ce qui suit est change. (Se rappeler du systeme de leviers)
-        GL11.glTranslatef(-3.0f, 0.0f,0.0f);
-        
-        //Desactivation de l'eclairage car il faut desactiver l'eclairage pour voir les fils de fer
-        GL11.glDisable(GL11.GL_LIGHTING);
-        
-        //On decide des rotations avant l'animation
-        GL11.glRotatef(xrot, 1.0f, 0.0f, 0.0f); // Rotate On The X Axis
-        GL11.glRotatef(yrot, 0.0f, 1.0f, 0.0f); // Rotate On The Y Axis
-        GL11.glRotatef(zrot, 0.0f, 0.0f, 1.0f); // Rotate On The Z Axis 
-        
-        //On trace uniquement les lignes
-        GL11.glBegin(GL11.GL_LINES);
-        // GL_LINES ne trace des lignes qu'entre deux points. Il va falloir rajouter des points intermediaires entre chaque paires afin de tracer tous les segments.
-        
-        //Creation du cube 2
-        // Front Face
-        GL11.glVertex3f(-1.0f, -1.0f, 1.0f); // Bottom Left Of The Texture and Quad
-        GL11.glVertex3f(1.0f, -1.0f, 1.0f); // Bottom Right Of The Texture and Quad
-        GL11.glVertex3f(1.0f, -1.0f, 1.0f); //Duplication du point d'avant pour faire la lisaison
-        GL11.glVertex3f(1.0f, 1.0f, 1.0f); //Duplication du point d'apres pour faire la liaison
-        GL11.glVertex3f(1.0f, 1.0f, 1.0f); // Top Right Of The Texture and Quad
-        GL11.glVertex3f(-1.0f, 1.0f, 1.0f); // Top Left Of The Texture and Quad
-        // Back Face
-        GL11.glVertex3f(-1.0f, -1.0f, -1.0f); // Bottom Right Of The Texture and Quad
-        GL11.glVertex3f(-1.0f, 1.0f, -1.0f); // Top Right Of The Texture and Quad
-        GL11.glVertex3f(-1.0f, 1.0f, -1.0f); //Duplication du point d'avant pour faire la lisaison
-        GL11.glVertex3f(1.0f, 1.0f, -1.0f); //Duplication du point d'apres pour faire la liaison
-        GL11.glVertex3f(1.0f, 1.0f, -1.0f); // Top Left Of The Texture and Quad
-        GL11.glVertex3f(1.0f, -1.0f, -1.0f); // Bottom Left Of The Texture and Quad
-        // Top Face
-        GL11.glVertex3f(-1.0f, 1.0f, -1.0f); // Top Left Of The Texture and Quad
-        GL11.glVertex3f(-1.0f, 1.0f, 1.0f); // Bottom Left Of The Texture and Quad
-        GL11.glVertex3f(-1.0f, 1.0f, 1.0f); //Duplication du point d'avant pour faire la lisaison
-        GL11.glVertex3f(1.0f, 1.0f, 1.0f); //Duplication du point d'apres pour faire la liaison
-        GL11.glVertex3f(1.0f, 1.0f, 1.0f); // Bottom Right Of The Texture and Quad
-        GL11.glVertex3f(1.0f, 1.0f, -1.0f); // Top Right Of The Texture and Quad
-        // Bottom Face
-        GL11.glVertex3f(-1.0f, -1.0f, -1.0f); // Top Right Of The Texture and Quad
-        GL11.glVertex3f(1.0f, -1.0f, -1.0f); // Top Left Of The Texture and Quad
-        GL11.glVertex3f(1.0f, -1.0f, -1.0f); //Duplication du point d'avant pour faire la lisaison
-        GL11.glVertex3f(1.0f, -1.0f, 1.0f); //Duplication du point d'apres pour faire la liaison
-        GL11.glVertex3f(1.0f, -1.0f, 1.0f); // Bottom Left Of The Texture and Quad
-        GL11.glVertex3f(-1.0f, -1.0f, 1.0f); // Bottom Right Of The Texture and Quad
-        // Right face
-        GL11.glVertex3f(1.0f, -1.0f, -1.0f); // Bottom Right Of The Texture and Quad
-        GL11.glVertex3f(1.0f, 1.0f, -1.0f); // Top Right Of The Texture and Quad
-        GL11.glVertex3f(1.0f, 1.0f, -1.0f); //Duplication du point d'avant pour faire la lisaison
-        GL11.glVertex3f(1.0f, 1.0f, 1.0f); //Duplication du point d'apres pour faire la liaison
-        GL11.glVertex3f(1.0f, 1.0f, 1.0f); // Top Left Of The Texture and Quad
-        GL11.glVertex3f(1.0f, -1.0f, 1.0f); // Bottom Left Of The Texture and Quad
-        // Left Face
-        GL11.glVertex3f(-1.0f, -1.0f, -1.0f); // Bottom Left Of The Texture and Quad
-        GL11.glVertex3f(-1.0f, -1.0f, 1.0f); // Bottom Right Of The Texture and Quad
-        GL11.glVertex3f(-1.0f, -1.0f, 1.0f); //Duplication du point d'avant pour faire la lisaison
-        GL11.glVertex3f(-1.0f, 1.0f, 1.0f); //Duplication du point d'apres pour faire la liaison
-        GL11.glVertex3f(-1.0f, 1.0f, 1.0f); // Top Right Of The Texture and Quad
-        GL11.glVertex3f(-1.0f, 1.0f, -1.0f); // Top Left Of The Texture and Quad
-        GL11.glEnd();
-        
-        
-        //On a desactive l'eclairage pour voir les fils. On peut maintenant le remettre
-        GL11.glEnable(GL11.GL_LIGHTING);
-        
+        xrot += 0.001f; // X Axis Rotation
+        yrot += 0.02f; // Y Axis Rotation
+        zrot += 0.0f; // Z Axis Rotation
+
         return true;
     }
     private void createWindow() throws Exception {
@@ -362,17 +282,10 @@ public class OpenGLEnVrac {
 
         FloatBuffer buffPosition = BufferUtils.createFloatBuffer(4).put(lightPosition);
         buffPosition.position(0);
-        
-        //Creation d'un buffer. C'est uns structure de donnee qui reagit comme un tableau dynamique
-        FloatBuffer buffSpecular = BufferUtils.createFloatBuffer(4).put(lightSpecularComponent);
-        buffSpecular.position(0);
                 
         GL11.glLight(GL11.GL_LIGHT1, GL11.GL_AMBIENT, buffAmbient);
         GL11.glLight(GL11.GL_LIGHT1, GL11.GL_DIFFUSE, buffDiffuse);
         GL11.glLight(GL11.GL_LIGHT1, GL11.GL_POSITION, buffPosition);
-        //Declaration de la composante speculaire
-        GL11.glLight(GL11.GL_LIGHT1, GL11.GL_SPECULAR, buffSpecular);
-        
         
         GL11.glEnable(GL11.GL_LIGHT1);
         
